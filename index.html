@@ -8,33 +8,25 @@
     <link rel="stylesheet" type="text/css" href="./Css/style_000.css">
     <link rel="stylesheet" type="text/css" href="./Css/logo_img.css">
     <link rel="icon" href="./Img/ProfilePhoto.jpg" type="x-icon">
-    <!-- <script>
-    function checkCookie() {
-        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)human\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        if (cookieValue !== "true") {
-            window.location.href = "https://friendlyxukun.github.io/human_check.html";
-        }
-    }
-    </script> -->
     <style>
         body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background: linear-gradient(125deg, #2C3E50, #27AE60,
-            #2980B9, #5f0068);
-        background-size: 500%;
-        animation: backgroundAnimation 15s linear infinite;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(125deg, #2C3E50, #27AE60, #2980B9, #5f0068);
+            background-size: 500%;
+            animation: backgroundAnimation 15s linear infinite;
         }
-  </style>
+    </style>
 </head>
+
 <body onload="checkCookie()">
     <div>
         <div class="card">
             <img src="./Img/ProfilePhoto.jpg" alt="Profile Photo" width="100" height="100" class="img">
         </div>
         <div class="title">
-            <a href="https://github.com/FriendlyXuKun" >
+            <a href="https://github.com/FriendlyXuKun">
                 <img src="./Img/Logo.png" alt="logo" height="50">
             </a>
         </div>
@@ -56,10 +48,10 @@
         <h3>
             And I hope you're GOOD every day!
         </h3>
-     </div>
-     <h2 class="CN-second-title">公告</h2>
-     <h2 class="EN-second-title">Notice</h2>
-     <div class="notice">
+    </div>
+    <h2 class="CN-second-title">公告</h2>
+    <h2 class="EN-second-title">Notice</h2>
+    <div class="notice">
         <p>
             版本2.3.3:
         </p>
@@ -94,20 +86,7 @@
                 Adjusted the layout of the "Projects under development" module.
             </li>
         </ul>
-     </div>
-     <!-- <h2 class="CN-second-title">我的联系方式</h2>
-     <h2 class="EN-second-title">My social account</h2>
-     <ul class="list">
-        <li>
-            <a href="https://github.com/FriendlyXuKun" target="_blank">这是我的Github! (My Github)</a>
-        </li>
-         <li>
-            <a href="https://weibo.com/u/7821122461" target="_blank">和我的微博 (My Weibo)</a>
-        </li>
-        <li>
-            <a href="https://space.bilibili.com/1242660278?spm_id_from=333.1007.0.0" target="_blank">或是我的Bilibili (My Bilibili)</a>
-        </li>
-    </ul> -->
+    </div>
     <h2 class="CN-second-title">工具箱</h2>
     <h2 class="EN-second-title">Tools</h2>
     <ul class="list">
@@ -121,7 +100,7 @@
             <a href="./Tools/calculator.html">计算器 (Calculator)</a>
         </li>
         <li>
-            <a href="./Tools/FlipCardGame.html" >翻卡游戏 (Flip Card Game)</a>
+            <a href="./Tools/FlipCardGame.html">翻卡游戏 (Flip Card Game)</a>
         </li>
     </ul>
     <h2 class="CN-second-title">正在开发的项目</h2>
@@ -146,31 +125,6 @@
             <a href="https://themagicflute.github.io" target="_blank">TheMagicFlute的Github个人网页 (TheMagicFlute's Pages)</a>
         </li>
     </ul>
-    <!-- <script>
-        document.getElementById("translate-btn").addEventListener("click", function () {
-            setTimeout(function () {
-                window.location.href = "https://friendlyxukun.github.io/cn";
-             }, 200);
-        });
-
-        var targetDate = new Date("January 1, 2024 00:00:00");
-
-        function updateCountdown() {
-            var currentDate = new Date();
-            var timeLeft = targetDate - currentDate;
-
-        if (timeLeft <= 0) {
-            document.getElementById("countdown").innerHTML = "Happy <span>NEW</span> Year!<br>Wish you'll be better this <span>NEW</span> year!";
-            return;
-        }
-
-        var hours = Math.floor(timeLeft / (1000 * 60 * 60));
-        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown").innerHTML = "There are still <span>" + hours + "h " + minutes + "min " + seconds + "s</span><br> left until New Year's Eve";
-    }
-    </script> -->
 </body>
 <footer>
     <a href="https://github.com/FriendlyXuKun">
@@ -182,7 +136,19 @@
     <a href="https://weibo.com/u/7897436586">
         <img src="./Img/sinaweibo.png" alt="Sinaweibo">
     </a>
-    <!-- <hr> -->
     <p>Copyright © 2024 FriendlyXuKun</p>
 </footer>
+<script>
+    function checkCookie() {
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)human\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (cookieValue !== "true") {
+            window.location.href = "https://friendlyxukun.github.io/password.html";
+        }
+    }
+
+    // Set cookie to true when returning from password.html
+    if (document.referrer.includes("password.html")) {
+        document.cookie = "human=true";
+    }
+</script>
 </html>
