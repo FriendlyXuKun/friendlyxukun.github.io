@@ -1,0 +1,30 @@
+body {
+    font-weight: bold;
+    font-family: 'Times New Roman', 楷体;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+li {
+    font-size: 20px;
+    padding-left: 0px;
+    line-height: 35px;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+p {
+    margin-top: -28px;
+    font-family: 'Times New Roman', 宋体;
+}
+
+.space {
+    height: 120px;
+}
+
+span {
+    color: #ff0000;
+}

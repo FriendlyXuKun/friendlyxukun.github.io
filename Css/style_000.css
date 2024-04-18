@@ -1,17 +1,9 @@
-.CN-second-title {
+.second-title {
     margin-left: 30px;
     margin-top: 30px;
     line-height: 10px;
     font-family: 华文中宋;
-    font-style: italic;
     font-size: 28px;
-}
-
-.EN-second-title {
-    margin-left: 30px;
-    margin-top: -15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
 }
 
 footer {
@@ -96,23 +88,27 @@ hr {
 }
 
 .notice {
-    font-family: 'Times New Roman', 华文中宋, serif;
     font-weight: bold;
-    width: 70%;
+    font-family: 'Times New Roman', 楷体;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .notice li {
+    padding-left: 0px;
     font-size: 20px;
     line-height: 35px;
-    margin-left: 60px;
-    list-style-type: disc;
+    margin-left: 20px;
+    list-style-type: none;
 }
 
 .notice p {
-    font-weight: bold;
     line-height: 35px;
     font-size: 23px;
     margin-left: 60px;
+}
+
+.notice span {
+    color: #ffb700;
 }
 
 .text-frame {

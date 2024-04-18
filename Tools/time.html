@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../Css/logo_img.css">
+    <title>Friendlyxukun-北京时间</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: black;
+            background-size: 100%;
+        }
+
+       h4 {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            font-size: 45px;
+            transform: translateX(-50%);
+            background: white;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        h1 {
+            position: absolute;
+            top: 32%;
+            left: 50%;
+            font-size: 150px;
+            transform: translate(-50%, -50%);
+            background: white;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <a href="../index.html">
+            <img src="../Img/ProfilePhoto.jpg" alt="Home" width="100" height="100" class="img">
+        </a>
+    </div>
+    <h4 id="date"></h4>
+    <h1 id="time"></h1>
+
+    <script>
+        function updateTime() {
+            var today = new Date();
+            var date = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
+            var time = ('0' + today.getHours()).slice(-2) + ":" + ('0' + today.getMinutes()).slice(-2) + ":" + ('0' + today.getSeconds()).slice(-2);
+            document.getElementById("date").innerHTML = date;
+            document.getElementById("time").innerHTML = time;
+        }
+
+        updateTime();
+
+        setInterval(updateTime, 1);
+    </script>
+</body>
+</html>
