@@ -93,6 +93,12 @@ hr {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.notice h1 {
+    line-height: 35px;
+    font-size: 23px;
+    margin-left: 60px;
+}
+
 .notice li {
     padding-left: 0px;
     font-size: 20px;
@@ -101,10 +107,8 @@ hr {
     list-style-type: none;
 }
 
-.notice p {
-    line-height: 35px;
-    font-size: 23px;
-    margin-left: 60px;
+.notice li li {
+    margin-left: 0px;
 }
 
 .notice span {
