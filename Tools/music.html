@@ -1,23 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendlyXuKun-音乐</title>
     <link rel="stylesheet" type="text/css" href="../Css/logo_img.css">
-    <title>FriendlyXuKun-音乐*搭建中*</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image:url("../Img/BG2.jpg");
+            background-size: 100%;
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
         }
 
-        div {
+        h1 {
+            color: #242424;
+        }
+
+        .music-row a {
+            display: block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff26;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+        }
+
+        a:hover {
+            background-color: #007bff8c;
+        }
+
+        audio {
+            transform: translateX(-50%);
+            z-index: 9999;
+            width: 90%;
+            margin-left: 50%;
+        }
+
+        .music-player-container {
+            background-color: #ffffff6c;
+            padding: 10px;
+            bottom: 0px;
+            width: 100%;
+            position: fixed;
+            backdrop-filter: blur(5px);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
             text-align: center;
-            margin-top: -50px;
-            line-height: 25px;
+        }
+        
+        h1 {
+            line-height: 100px;
         }
     </style>
 </head>
@@ -27,9 +70,33 @@
             <img src="../Img/ProfilePhoto.jpg" alt="Home" width="100" height="100" class="img">
         </a>
     </div>
-    <div>
-        <h1>搭建中（音乐）</h1>
-        <h1>预计于1.4.2版本搭建完成</h1>
+    <h1>音乐播放器</h1>
+    <div class="music-row">
+        <a href="#" onclick="playMusic('../Audio/久石譲 - Summer.mp3')">久石譲 - Summer</a>
+        <a href="#" onclick="playMusic('../Audio/莫扎特 - B大调第13号钢琴奏鸣曲.mp3')">莫扎特 - B大调第13号钢琴奏鸣曲</a>
+        <a href="#" onclick="playMusic('../Audio/徐梦圆 - China-A.mp3')">徐梦圆 - China-A</a>
     </div>
+    
+    <div class="music-player-container">
+        <p id="musicName">音乐</p>
+        <audio controls id="musicPlayer">
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        function playMusic(music) {
+            var musicPlayer = document.getElementById('musicPlayer');
+            var musicName = document.getElementById('musicName');
+            
+            musicPlayer.src = music;
+
+            var musicFileName = music.split('/').pop().split('.')[0];
+            
+            musicName.textContent = musicFileName;
+            
+            musicPlayer.play();
+        }
+    </script>
 </body>
 </html>
