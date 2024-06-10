@@ -3,66 +3,7 @@
 <head>
     <title>FriendlyXuKun-音乐</title>
     <link rel="stylesheet" type="text/css" href="../Css/logo_img.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-image:url("../Img/BG2.jpg");
-            background-size: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        h1 {
-            color: #242424;
-        }
-
-        .music-row a {
-            display: block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #007bff26;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            backdrop-filter: blur(5px);
-        }
-
-        a:hover {
-            background-color: #007bff8c;
-        }
-
-        audio {
-            transform: translateX(-50%);
-            z-index: 9999;
-            width: 90%;
-            margin-left: 50%;
-        }
-
-        .music-player-container {
-            background-color: #ffffff6c;
-            padding: 10px;
-            bottom: 0px;
-            width: 100%;
-            position: fixed;
-            backdrop-filter: blur(5px);
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        
-        h1 {
-            line-height: 100px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../Css/style_007.css">
 </head>
 <body>
     <div class="card">
@@ -72,31 +13,25 @@
     </div>
     <h1>音乐播放器</h1>
     <div class="music-row">
-        <a href="#" onclick="playMusic('../Audio/久石譲 - Summer.mp3')">久石譲 - Summer</a>
-        <a href="#" onclick="playMusic('../Audio/莫扎特 - B大调第13号钢琴奏鸣曲.mp3')">莫扎特 - B大调第13号钢琴奏鸣曲</a>
-        <a href="#" onclick="playMusic('../Audio/徐梦圆 - China-A.mp3')">徐梦圆 - China-A</a>
+        <a href="#" onclick="playTrack(0)">久石譲 - Summer</a>
+        <a href="#" onclick="playTrack(1)">莫扎特 - B大调第13号钢琴奏鸣曲</a>
+        <a href="#" onclick="playTrack(2)">徐梦圆 - China-A</a>
+        <a href="#" onclick="playTrack(3)">Plum - Going On</a>
     </div>
     
     <div class="music-player-container">
-        <p id="musicName">音乐</p>
-        <audio controls id="musicPlayer">
-            <source src="" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="music-player">
+            <h2 id="musicName">音乐名称</h2>
+            <audio id="musicPlayer" src="" type="audio/mpeg"></audio>
+            <div id="timeDisplay">0:00 / 0:00</div>
+            <input type="range" step="1" value="0" min="0" max="1000" class="progress-bar" oninput="handleProgressBar()">
+            <div class="controls">
+                <img src="..\Img\Icons\上一个.png" onclick="playPrevious()">
+                <img src="..\Img\Icons\播放.png" onclick="togglePlayPause()" id="playButton">
+                <img src="..\Img\Icons\下一个.png" onclick="playNext()">
+            </div>
+        </div>
     </div>
-    <script>
-        function playMusic(music) {
-            var musicPlayer = document.getElementById('musicPlayer');
-            var musicName = document.getElementById('musicName');
-            
-            musicPlayer.src = music;
-
-            var musicFileName = music.split('/').pop().split('.')[0];
-            
-            musicName.textContent = musicFileName;
-            
-            musicPlayer.play();
-        }
-    </script>
+    <script src="../Js/music.js"></script>
 </body>
 </html>
